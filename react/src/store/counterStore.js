@@ -14,4 +14,8 @@ export const counter = createSlice({
         reset:(state) => {state.count = 0;}
 
     }
-})
+});
+
+export const {increment, decrement, reset,
+changeByAmount} = counter.actions;
+export default counter.reducer;
