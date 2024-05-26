@@ -2,7 +2,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {decrement, increment} from "../store/counterStore.js";
 
 const Counter = () => {
-    const counter = useSelector((state) => state.counter.count);
+    const counter = useSelector((state) => state.counterReducer.count);
     const dispatch = useDispatch();
 
     return (
