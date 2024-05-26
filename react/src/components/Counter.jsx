@@ -6,7 +6,7 @@ const Counter = () => {
     const dispatch = useDispatch();
 
     return (
-        <div>
+        <div style={{backgroundColor:"blueviolet"}}>
             here
             <h1>{counter}</h1>
             <button onClick={() => {dispatch(increment())}}>+</button>
