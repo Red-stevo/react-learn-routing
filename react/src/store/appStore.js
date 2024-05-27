@@ -3,6 +3,6 @@ import {counter} from "./counterStore.js";
 
 export const appStore = configureStore({
     reducer : {
-        counterReducer:counter
+        counter:counter
     }
 });
