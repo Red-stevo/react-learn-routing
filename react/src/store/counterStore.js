@@ -1,7 +1,7 @@
 import {createSlice} from "@reduxjs/toolkit";
 
 export const initialState = {
-    count : 0
+    count : 0 //this is the value hold and passer.
 }
 
 const counterStore = createSlice({
