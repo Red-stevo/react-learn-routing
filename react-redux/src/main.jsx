@@ -4,6 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import {Provider} from "react-redux";
 import store from "./AppStore/store.js";
+import "bootstrap/dist/css/bootstrap.min.css"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

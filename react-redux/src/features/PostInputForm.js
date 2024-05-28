@@ -1,3 +1,4 @@
+import {Form} from "react-bootstrap";
 
 const PostInputForm = () => {
     return (
