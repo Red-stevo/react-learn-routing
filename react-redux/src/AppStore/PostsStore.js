@@ -1,4 +1,4 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice, nanoid} from "@reduxjs/toolkit";
 
 const initialState = [
     {id:1, title:"Welcome to coding.", content:"LuaCoding Challenge The Best NAND the greatest coding ground."},
@@ -10,8 +10,18 @@ const PostsStore = createSlice({
     name:"posts",
     initialState,
     reducers:{
-        AddPost(state, action) {
-            state.push(action.payload)
+        AddPost:{
+            reducers(state, action) {
+                state.push(action.payload)
+            },prepare(title, content){
+                return {
+                    payload: {
+                        id: nanoid(),
+                        title,
+                        content
+                    }
+                }
+            }
         }
     }
 });

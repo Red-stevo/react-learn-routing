@@ -11,11 +11,7 @@ const PostInputForm = () => {
 
     const savePost = () => {
         if(title && content){
-            dispatch(AddPost({
-                id:nanoid,
-                title,
-                content
-            }));
+            dispatch(AddPost(title, content));
 
             setTitle("");
             setContent("");
