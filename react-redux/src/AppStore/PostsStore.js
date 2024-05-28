@@ -14,4 +14,6 @@ const PostsStore = createSlice({
     }
 });
 
+export const AllPosts = (state) => state.posts;
+
 export default PostsStore.reducer
