@@ -10,10 +10,14 @@ const PostsStore = createSlice({
     name:"posts",
     initialState,
     reducers:{
-
+        AddPost(state, action) {
+            state.push(action.payload)
+        }
     }
 });
 
 export const AllPosts = (state) => state.posts;
 
-export default PostsStore.reducer
+export const {AddPost} = PostsStore.actions;
+
+export default PostsStore.reducer;
