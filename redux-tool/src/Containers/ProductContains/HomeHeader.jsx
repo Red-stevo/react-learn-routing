@@ -1,7 +1,9 @@
 import {Container, Navbar} from "react-bootstrap";
+import {Outlet} from "react-router-dom";
 
 const HomeHeader = ()  => {
     return(
+        <>
             <Navbar className="bg-body-tertiary">
                 <Container>
                     <Navbar.Brand href="/home">Shopping App</Navbar.Brand>
@@ -10,6 +12,9 @@ const HomeHeader = ()  => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+
+            <Outlet />
+        </>
         );
     }
 export default HomeHeader;
