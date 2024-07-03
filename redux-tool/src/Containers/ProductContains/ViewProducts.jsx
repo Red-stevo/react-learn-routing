@@ -17,7 +17,6 @@ const ViewProducts = () => {
                                     <Card.Title id="title">{record.title.substring(0, 35)+"..."}</Card.Title>
                                     <Card.Text className={"card-text"}>
                                         <span className={"price"}>${record.price}</span><br/>
-                                        <span className={"category"}>{record.category}</span>
                                     </Card.Text>
                                 </Card.Body>
 

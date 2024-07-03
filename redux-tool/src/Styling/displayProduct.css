@@ -33,6 +33,12 @@
     font-size: 13px;
 }
 
+.price {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(234, 229, 229, 0.51);
+}
+
 .product-col {
     flex: 1 1 150px;
     max-width: calc(33.333% - 16px);
