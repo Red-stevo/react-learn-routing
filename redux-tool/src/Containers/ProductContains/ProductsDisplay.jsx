@@ -10,13 +10,14 @@ const ProductsDisplay = () => {
     const dispatch = useDispatch();
 
     const saveProducts = () => {
+        console.log("request.");
         fetchProducts().then((response) => {
+            console.log("request.");
             dispatch(setProducts(response.data));
         }).catch(error => {
             console.error(error.response)
         })
     }
-
 
     useEffect(() => {
         saveProducts();
