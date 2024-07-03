@@ -1,11 +1,11 @@
 #product {
     width: 80%;
-    height: 60%;
+    height: 110%;
 }
 
 
 #product-card {
-    width: 240px;
+    width: 250px;
     height: 240px;
     overflow: hidden;
     margin: 3px;
@@ -20,15 +20,18 @@
 
 
 #title {
-    font-size: 10px;
-    height: 90%;
+    display: flex;
+    height: 80%;
     overflow: hidden;
 }
 
 #card-body {
-    width: 80%;
+    width: 100%;
 }
 
+.card-text, #title {
+    font-size: 13px;
+}
 
 .product-col {
     flex: 1 1 150px;
