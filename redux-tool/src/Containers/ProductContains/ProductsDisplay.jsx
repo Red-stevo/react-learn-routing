@@ -21,10 +21,12 @@ const ProductsDisplay = () => {
         saveProducts();
     }, []);
 
-    return(<div  id={"display-page"}>
+    return(<div>
         <ViewProducts />
         <ViewProducts />
-    </div>);
+        <ViewProducts />
+        <ViewProducts />
+        </div>);
 }
 
 export default ProductsDisplay;

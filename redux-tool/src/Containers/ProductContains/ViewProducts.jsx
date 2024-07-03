@@ -4,7 +4,7 @@ import {useSelector} from "react-redux";
 const ViewProducts = () => {
     const products = useSelector((state) => state.productsState.products);
     return(
-        <>
+        <div id={"display-page"}>
             {(products.length > 0) ?
                 products.map((record) => {
                     return(
@@ -19,7 +19,7 @@ const ViewProducts = () => {
                     )
                 }):
                 <h2>Loading... <Spinner animation="border" /></h2>}
-        </>
+        </div>
     )
 }
 
