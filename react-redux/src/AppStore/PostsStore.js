@@ -12,7 +12,7 @@ const PostsStore = createSlice({
     reducers:{
         AddPost:{
             reducers(state, action) {
-                state.push(action.payload)
+                state = [...state, action.payload]
             },prepare(title, content){
                 return {
                     payload: {
