@@ -20,7 +20,7 @@ const ProductsDisplay = () => {
         saveProducts();
     }, []);
 
-    return(<ViewProducts />);
+    return(<ViewProducts/>);
 }
 
 export default ProductsDisplay;
