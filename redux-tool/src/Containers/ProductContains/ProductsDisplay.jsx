@@ -6,21 +6,19 @@ import {setProducts} from "../../redux/actions/productsActions.js";
 
 
 const ProductsDisplay = () => {
-    const products = useSelector((state) => state.productsState.products);
+    const products = useSelector((state) => state.productsState.products.products);
     const dispatch = useDispatch();
 
     const saveProducts = () => {
-        fetchProducts().then((res) => {
-            dispatch(setProducts(res.data));
-            console.log(res)
+        fetchProducts().then((response) => {
+            dispatch(setProducts(response.data));
         }).catch(error => {
-            console.log(error.response)
+            console.error(error.response)
         })
     }
 
 
     useEffect(() => {
-        console.log(products);
         saveProducts();
     }, []);
 

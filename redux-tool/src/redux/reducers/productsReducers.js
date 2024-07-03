@@ -3,9 +3,12 @@ import {productsActionsTypes} from "../actions/actionTypes/productsActionsTypes.
 const initialState = {
     products:[]
 }
-export const productsReducer = (state= initialState, {type, payload}) =>{
-    if(type === productsActionsTypes.SET_PRODUCTS){
-        return state.products = [...state, ...payload];
+export const productsReducer = (state= initialState, {type, payload}) => {
+    console.log("products reducer.")
+    if (type === productsActionsTypes.SET_PRODUCTS) {
+        return {
+            products: {...state, products:payload}
+        }
     }else
         return state;
 }
