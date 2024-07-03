@@ -6,7 +6,7 @@ function App() {
   return (
       <Router>
           <Routes>
-              <Route index element={<HomeHeader />} >
+              <Route path={"/home"} element={<HomeHeader />} >
 
               </Route>
           </Routes>

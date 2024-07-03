@@ -4,7 +4,7 @@ const HomeHeader = ()  => {
     return(
             <Navbar className="bg-body-tertiary">
                 <Container>
-                    <Navbar.Brand href="#home">Shopping App</Navbar.Brand>
+                    <Navbar.Brand href="/home">Shopping App</Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                     </Navbar.Collapse>
