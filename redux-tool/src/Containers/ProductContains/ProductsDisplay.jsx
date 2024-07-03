@@ -1,4 +1,4 @@
-import {Button, Card} from "react-bootstrap";
+import {Button, Card, Spinner} from "react-bootstrap";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {fetchProducts} from "../BackendUtils/FetchProducts.js";
@@ -6,7 +6,7 @@ import {setProducts} from "../../redux/actions/productsActions.js";
 
 
 const ProductsDisplay = () => {
-    const products = useSelector((state) => state.productsState.products.products);
+    const products = useSelector((state) => state.productsState.products);
     const dispatch = useDispatch();
 
     const saveProducts = () => {
@@ -35,8 +35,7 @@ const ProductsDisplay = () => {
                 <Button variant="primary">View</Button>
             </Card.Body>
         </Card>:
-        <h2 className={"display-6 justify-content-center align-content-center flex-column"}>
-            There Are No Products At The Moment?</h2>}
+        <h2>Loading... <Spinner animation="border" /></h2>}
     </>);
 }
 
