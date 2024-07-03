@@ -26,12 +26,12 @@ const ProductsDisplay = () => {
     return(<>
         {products.length > 0?products.map((record) => {
             return(
-                <Card style={{ width: '18rem' }} className={"mt-3"} key={record.id}>
-                    <Card.Img variant="top" src="holder.js/200px200" height={200} width={200} />
+                <Card  className={"mt-3"} key={record.id}>
+                    <Card.Img variant="top" src={record.image} id={"product"} />
                     <Card.Body>
                         <Card.Title>{record.title}</Card.Title>
                         <Card.Text>
-
+                            {record.description}
                         </Card.Text>
                         <Button variant="primary">View</Button>
                     </Card.Body>
