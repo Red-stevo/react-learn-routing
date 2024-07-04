@@ -2,6 +2,7 @@ import {useParams} from "react-router-dom";
 import {FetchProduct} from "../BackendUtils/FetchProduct.js";
 import {useDispatch, useSelector} from "react-redux";
 import {selectProduct} from "../../redux/actions/productsActions.js";
+import {useEffect} from "react";
 
 const ProductDetails = () => {
     const product = useSelector((state) => state);
@@ -9,12 +10,17 @@ const ProductDetails = () => {
     const dispatch = useDispatch();
 
     const fetchProduct = () => {
-        FetchProduct("").then((response) => {
+        FetchProduct(`https://fakestoreapi.com/products/${productId}`).then((response) => {
             dispatch(selectProduct(response.data));
         }).catch((error) => {
             console.log("error", error.response.data);
-        })
+        });
     }
+
+    useEffect(() => {
+        fetchProduct();
+        console.log(product);
+    }, [productId]);
 
     return(<>
 
