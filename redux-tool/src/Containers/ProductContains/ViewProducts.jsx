@@ -1,16 +1,18 @@
 import {Button, Card, Spinner} from "react-bootstrap";
 import {useSelector} from "react-redux";
 import "./../../Styling/displayProduct.css"
+import {useNavigate} from "react-router-dom";
 
 const ViewProducts = () => {
     const products = useSelector((state) => state.productsState.products);
+    const navigate = useNavigate();
     return (
         <div id="display-page" className="product-container">
             {(products.length > 0) ?
                 products.map((record) => {
                     return (
                         <Button className="product-col" key={record.id}
-                                onClick={() => console.error("we are doing great.")}>
+                                onClick={() => navigate("product/"+record.id)}>
                             <Card id="product-card">
                                 <Card.Img variant="top" src={record.image} id="product"/>
                                 <Card.Body id="card-body">
@@ -19,9 +21,7 @@ const ViewProducts = () => {
                                         <span className={"price"}>${record.price}</span><br/>
                                     </Card.Text>
                                 </Card.Body>
-
                             </Card>
-
                         </Button>
                     );
                 }) :
