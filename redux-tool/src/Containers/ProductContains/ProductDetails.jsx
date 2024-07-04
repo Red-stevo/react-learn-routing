@@ -25,11 +25,18 @@ const ProductDetails = () => {
     }, [productId]);
 
     return(<div>
-        <Card>
+        <Card id={"view-card"}>
+            <div>
             <Card.Img src={image} id={"product-image"} />
             <Card.Title>{title}</Card.Title>
+            </div>
             <Card.Body>
-
+                <Card.Text id={"description"}>
+                    {description}
+                </Card.Text>
+                {/*<Card.Text>
+                    ${price}
+                </Card.Text>*/}
             </Card.Body>
         </Card>
         </div>);
