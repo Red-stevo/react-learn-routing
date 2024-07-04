@@ -8,4 +8,13 @@ export const productsReducer = (state= initialState, {type, payload}) => {
         return {...state, products:payload}
     }else
         return state;
+
+}
+
+export const productReducer = (state = {}, {type, payload}) => {
+    if(type === productsActionsTypes.SELECTED_PRODUCT){
+        return {...state, product:payload};
+    }else {
+        return state;
+    }
 }
