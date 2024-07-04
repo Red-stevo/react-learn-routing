@@ -3,9 +3,12 @@ import {FetchProduct} from "../BackendUtils/FetchProduct.js";
 import {useDispatch, useSelector} from "react-redux";
 import {selectProduct} from "../../redux/actions/productsActions.js";
 import {useEffect} from "react";
+import {Card} from "react-bootstrap";
+import "./../../Styling/ViewProduct.css";
 
 const ProductDetails = () => {
-    const product = useSelector((state) => state);
+    const product = useSelector((state) => state.productState.product);
+    const {title, price, description, category, image, rating} = product;
     const { productId} = useParams();
     const dispatch = useDispatch();
 
@@ -19,12 +22,17 @@ const ProductDetails = () => {
 
     useEffect(() => {
         fetchProduct();
-        console.log(product);
     }, [productId]);
 
-    return(<>
+    return(<div>
+        <Card>
+            <Card.Img src={image} id={"product-image"} />
+            <Card.Title>{title}</Card.Title>
+            <Card.Body>
 
-        </>);
+            </Card.Body>
+        </Card>
+        </div>);
 }
 
 export default ProductDetails;
