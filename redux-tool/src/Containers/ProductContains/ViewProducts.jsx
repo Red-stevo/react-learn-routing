@@ -12,7 +12,7 @@ const ViewProducts = () => {
                 products.map((record) => {
                     return (
                         <Button className="product-col" key={record.id}
-                                onClick={() => navigate("product/"+record.id)}>
+                                onClick={() => navigate("/home/product/"+record.id)}>
                             <Card id="product-card">
                                 <Card.Img variant="top" src={record.image} id="product"/>
                                 <Card.Body id="card-body">
