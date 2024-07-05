@@ -1,7 +1,7 @@
 import {useParams} from "react-router-dom";
 import {FetchProduct} from "../BackendUtils/FetchProduct.js";
 import {useDispatch, useSelector} from "react-redux";
-import {selectProduct} from "../../redux/actions/productsActions.js";
+import {removeSelectedProduct, selectProduct} from "../../redux/actions/productsActions.js";
 import {useEffect} from "react";
 import {Card} from "react-bootstrap";
 import "./../../Styling/ViewProduct.css";
@@ -21,7 +21,12 @@ const ProductDetails = () => {
     }
 
     useEffect(() => {
-        fetchProduct();
+        if(productId && productId !== "")
+            fetchProduct();
+        return () => {
+            console.log("clean up")
+            dispatch(removeSelectedProduct());
+        }
     }, [productId]);
 
     return(<div>
@@ -37,10 +42,10 @@ const ProductDetails = () => {
                 <Card.Text id={"description"}>
                     {description}
                 </Card.Text>
-                <Card.Text>
+               {/* <Card.Text>
                     {rating.rate}
                     {rating.count}
-                </Card.Text>
+                </Card.Text>*/}
             </Card.Body>
         </Card>
         </div>);
