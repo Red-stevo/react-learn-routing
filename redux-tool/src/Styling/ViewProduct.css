@@ -6,6 +6,7 @@
 #view-card {
     display: flex;
     flex-direction: row;
+    border: none;
 }
 
 #description {
@@ -15,6 +16,7 @@
     font-weight: normal;
     font-size: 16px;
     width: 70%;
+    margin-top: 16%;
     margin-left: 15%;
 }
 
@@ -22,5 +24,5 @@
     display: flex;
     justify-content: flex-start;
     font-size: large;
-
+    color: #1e31ff;
 }

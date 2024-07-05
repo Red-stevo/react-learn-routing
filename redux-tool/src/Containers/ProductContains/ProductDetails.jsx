@@ -8,7 +8,7 @@ import "./../../Styling/ViewProduct.css";
 
 const ProductDetails = () => {
     const product = useSelector((state) => state.productState.product);
-    const {title, price, description, category, image, rating} = product;
+    const {title, price, description, image, rating} = product;
     const { productId} = useParams();
     const dispatch = useDispatch();
 
@@ -36,6 +36,10 @@ const ProductDetails = () => {
             <Card.Body>
                 <Card.Text id={"description"}>
                     {description}
+                </Card.Text>
+                <Card.Text>
+                    {rating.rate}
+                    {rating.count}
                 </Card.Text>
             </Card.Body>
         </Card>
