@@ -45,9 +45,9 @@ const ProductDetails = () => {
                             {description}
                         </Card.Text>
                         {/* <Card.Text>
-                    {rating.rate}
-                    {rating.count}
-                    </Card.Text>*/}
+                        {rating.rate}
+                        {rating.count}
+                        </Card.Text>*/}
                     </Card.Body>
                 </Card>
         }
